@@ -8,22 +8,22 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.apache.logging.log4j.core.pattern.AbstractStyleNameConverter;
 
 public class Redtext extends Module {
-    private ModeSetting Mode = new ModeSetting("Mode", this, "Red", "Red", "Green", "Cyan");
+    private ModeSetting chatModes = new ModeSetting("Mode", this, "Red", "Red", "Green", "Cyan");
 
     public Redtext() {
         super("Redtext", Category.Chat);
-        addSettings(Mode);
+        addSettings(chatModes);
     }
 
     @SubscribeEvent
     public void onChat(ClientChatEvent event) {
-        if (Mode.getMode().equals("Red")) {
+        if (chatModes.modes.get(chatModes.index).equals("Red")) {
             event.setMessage("@" + event.getMessage());
         }
-        else if (Mode.getMode().equals("Green")) {
+        else if (chatModes.modes.get(chatModes.index).equals("Green")) {
             event.setMessage(">" + event.getMessage());
         }
-        else if (Mode.getMode().equals("Cyan")) {
+        else if (chatModes.modes.get(chatModes.index).equals("Cyan")) {
             event.setMessage("^" + event.getMessage());
         }
     }

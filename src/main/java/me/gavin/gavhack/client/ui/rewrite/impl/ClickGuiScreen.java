@@ -27,7 +27,7 @@ public class ClickGuiScreen extends GuiScreen {
             xOffset += 110;
         }
 
-        guiColor = new Color(255, 0, 0);
+        guiColor = new Color(94, 8, 63);
     }
 
     @Override
