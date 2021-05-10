@@ -16,12 +16,12 @@ public class AutoEZ extends Module {
     private EntityPlayer focus = null;
 
     public AutoEZ() {
-        super("ChatSuffix", Category.Chat);
+        super("AutoEZ", Category.Combat);
         addSettings(ezMode);
     }
 
     @SubscribeEvent
-    private void livingDeathEventListenerListener(AttackEntityEvent event) {
+    public void livingDeathEventListenerListener(AttackEntityEvent event) {
         if (Minecraft.getMinecraft().player.isEntityAlive()) {
             if (event.getTarget() instanceof EntityPlayer) {
                 focus = (EntityPlayer) event.getTarget();

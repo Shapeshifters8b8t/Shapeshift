@@ -19,7 +19,7 @@ public class AutoDupe extends Module {
         if (mc.player.inventory.hasItemStack(new ItemStack(Block.getBlockFromItem(Item.getItemById(17))))) {
             int slot = mc.player.inventory.getSlotFor(new ItemStack(Block.getBlockFromItem(Item.getItemById(17))));
             Minecraft.getMinecraft().playerController.windowClick(Minecraft.getMinecraft().player.inventoryContainer.windowId, slot, 0, ClickType.QUICK_CRAFT, Minecraft.getMinecraft().player);
-            Utils.printMSG("Craft logs into planks before you pick up the item.");
+            Utils.printMSG("Found logs in slot " + slot + ".");
         }
         else {
             Utils.printMSG("Found no logs in inventory.");
