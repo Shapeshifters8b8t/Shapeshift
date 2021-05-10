@@ -67,6 +67,7 @@ public class ModuleManager {
         registerMod(new HudEditor());
         registerMod(new AutoDupe());
         registerMod(new ClickGUIOld());
+        registerMod(new PacketEXP());
 
         // chat
         registerMod(new Redtext());
