@@ -7,7 +7,6 @@ import me.gavin.gavhack.client.setting.impl.NumberSetting;
 import org.lwjgl.input.Keyboard;
 
 public class ClickGUIOld extends Module {
-
     public NumberSetting red = new NumberSetting("R", this, 255, 0, 255, 1);
     public NumberSetting green = new NumberSetting("G", this, 0, 0, 255, 1);
     public NumberSetting blue = new NumberSetting("B", this, 0, 0, 255, 1);

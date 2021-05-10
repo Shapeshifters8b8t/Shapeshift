@@ -1,6 +1,5 @@
 package me.gavin.gavhack.mixin.mixins;
 
-import me.gavin.gavhack.client.module.mods.render.NoCaveCulling;
 import me.gavin.gavhack.client.module.mods.render.XRay;
 import net.minecraft.client.renderer.chunk.VisGraph;
 import net.minecraft.util.math.BlockPos;
@@ -14,8 +13,7 @@ public class MixinVisGraph {
 
     @Inject(method = "setOpaqueCube", at = @At("HEAD"), cancellable = true)
     public void setOpaqueCubePatch(BlockPos pos, CallbackInfo ci) {
-        if (NoCaveCulling.stopCaveCulling || XRay.doXray)
-            ci.cancel();
+
     }
 
 }

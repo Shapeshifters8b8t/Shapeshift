@@ -53,6 +53,6 @@ public class ClientBootstrapper {
         Runtime.getRuntime().addShutdownHook(BeriiOnToppe.configSystem);
         BeriiOnToppe.log("Config System initialized");
 
-        BeriiOnToppe.log("Completed Gavhack initialization");
+        BeriiOnToppe.log("Completed BeriiClient initialization");
     }
 }

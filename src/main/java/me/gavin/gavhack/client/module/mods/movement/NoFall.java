@@ -4,6 +4,7 @@ import me.gavin.gavhack.client.events.LocalTickEvent;
 import me.gavin.gavhack.client.module.Category;
 import me.gavin.gavhack.client.module.Module;
 import net.minecraft.network.play.client.CPacketPlayer;
+import net.minecraft.network.play.client.CPacketPlayerAbilities;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class NoFall extends Module {

@@ -14,7 +14,7 @@ public class DiscordService {
         DiscordEventHandlers handlers = new DiscordEventHandlers();
         discordRPC.Discord_Initialize(discordID, handlers, true, null);
         richPresence.startTimestamp = System.currentTimeMillis() / 1000L;
-        richPresence.details = "gavhack is mighty fine";
+        richPresence.details = "beriiclient is best 8 bait cloosh";
         richPresence.largeImageKey = "moon_1";
         //richPresence.smallImageKey = "moon_1";
         richPresence.state = null;

@@ -1,13 +1,7 @@
 package me.gavin.gavhack.client.module;
 
 import me.gavin.gavhack.client.misc.util.FontUtil;
-import me.gavin.gavhack.client.module.mods.chat.ChatSuffix;
-import me.gavin.gavhack.client.module.mods.chat.Greentext;
-import me.gavin.gavhack.client.module.mods.combat.*;
-import me.gavin.gavhack.client.module.mods.misc.*;
-import me.gavin.gavhack.client.module.mods.movement.*;
-import me.gavin.gavhack.client.module.mods.render.*;
-import me.gavin.gavhack.client.module.mods.world.*;
+import me.gavin.gavhack.client.module.mods.chat.*;
 import me.gavin.gavhack.client.module.mods.combat.*;
 import me.gavin.gavhack.client.module.mods.misc.*;
 import me.gavin.gavhack.client.module.mods.movement.*;
@@ -43,16 +37,13 @@ public class ModuleManager {
         registerMod(new Freecam());
         registerMod(new Fullbright());
         registerMod(new NameTags());
-        registerMod(new NoCaveCulling());
         registerMod(new NoRender());
         registerMod(new NoWeather());
         registerMod(new ViewModel());
         registerMod(new Wallhack());
-        registerMod(new ImposterESP());
         registerMod(new XRay());
 
         // movement
-        registerMod(new AirJump());
         registerMod(new AutoWalk());
         registerMod(new NoFall());
         registerMod(new NoSlow());
@@ -62,29 +53,24 @@ public class ModuleManager {
         registerMod(new Velocity());
 
         // world
-        registerMod(new AntiSound());
         registerMod(new BuildHeight());
-        registerMod(new FastPlace());
         registerMod(new NoRotate());
-        registerMod(new SoundLogger());
         registerMod(new Timer());
-        registerMod(new XCarry());
 
         // misc
         registerMod(new AntiCrash());
-        registerMod(new Australia());
         registerMod(new DiscordRPC());
         registerMod(new ClickGUI());
-        registerMod(new ClickGUIOld());
         registerMod(new CustomFont());
         registerMod(new FakePlayer());
         registerMod(new HudEditor());
         registerMod(new AutoDupe());
+        registerMod(new ClickGUIOld());
 
         // chat
-        registerMod(new Greentext());
+        registerMod(new Redtext());
         registerMod(new ChatSuffix());
-        //add(new Shrug());
+        registerMod(new Shrug());
             
         modules.sort(this::compareTo);
 
