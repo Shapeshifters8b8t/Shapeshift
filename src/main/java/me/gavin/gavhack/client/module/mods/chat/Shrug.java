@@ -11,7 +11,7 @@ public class Shrug extends Module {
     }
 
     @SubscribeEvent
-    public void onChatt(ClientChatEvent event) {
+    public void onChat(ClientChatEvent event) {
         String shrugText = "¯\\_(ツ)_/¯";
         event.setMessage(event.getMessage() + " " + shrugText);
     }

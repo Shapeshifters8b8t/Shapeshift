@@ -10,7 +10,7 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-// 0_0
+// 0_0n't
 public class AutoTotem extends Module {
 
     public NumberSetting health = new NumberSetting("Health", this, 20, 1, 36, 1);

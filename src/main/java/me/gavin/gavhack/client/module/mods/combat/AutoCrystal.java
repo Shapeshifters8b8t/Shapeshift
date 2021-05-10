@@ -89,7 +89,6 @@ public class AutoCrystal extends Module {
     private void doBreakLogic() {
 
         if (nearestCrystal != null && timer.hasTimeElapsed((long)breakDelayMS.getValue() * 50, true)) {
-
             mc.player.swingArm(EnumHand.MAIN_HAND);
             mc.playerController.attackEntity(mc.player, nearestCrystal);
         }
@@ -99,11 +98,10 @@ public class AutoCrystal extends Module {
     public void onPacket(PacketEvent.Receive event) {
         if (!placeboMode.enabled)
             return;
-
         if (event.getPacket() instanceof SPacketSoundEffect) {
             SPacketSoundEffect soundPacket = (SPacketSoundEffect) event.getPacket();
-
             if (soundPacket.sound == SoundEvents.ENTITY_GENERIC_EXPLODE) {
+                event.setCanceled(true);
                 if (nearestCrystal != null)
                     nearestCrystal.setDead();
             }

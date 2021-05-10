@@ -12,7 +12,7 @@ public class MixinLoader implements IFMLLoadingPlugin {
     public MixinLoader() {
         MixinBootstrap.init();
         Mixins.addConfiguration("mixins.gavhack.json");
-        System.out.println("Gavhack mixins initialized");
+        System.out.println("Beriiclient mixins initialized");
     }
 
     @Override

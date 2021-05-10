@@ -6,6 +6,7 @@ import me.gavin.gavhack.client.module.mods.combat.*;
 import me.gavin.gavhack.client.module.mods.misc.*;
 import me.gavin.gavhack.client.module.mods.movement.*;
 import me.gavin.gavhack.client.module.mods.render.*;
+import me.gavin.gavhack.client.module.mods.tests.ChatTests;
 import me.gavin.gavhack.client.module.mods.world.*;
 
 import java.util.ArrayList;
@@ -30,6 +31,7 @@ public class ModuleManager {
         registerMod(new FastUtil());
         registerMod(new KillAura());
         registerMod(new Offhand());
+        registerMod(new AutoEZ());
 
         // render
         registerMod(new BlockOutline());
@@ -62,7 +64,6 @@ public class ModuleManager {
         registerMod(new DiscordRPC());
         registerMod(new ClickGUI());
         registerMod(new CustomFont());
-        registerMod(new FakePlayer());
         registerMod(new HudEditor());
         registerMod(new AutoDupe());
         registerMod(new ClickGUIOld());
@@ -71,7 +72,10 @@ public class ModuleManager {
         registerMod(new Redtext());
         registerMod(new ChatSuffix());
         registerMod(new Shrug());
-            
+
+        // tests
+        registerMod(new ChatTests());
+
         modules.sort(this::compareTo);
 
         sortedMods.addAll(modules);

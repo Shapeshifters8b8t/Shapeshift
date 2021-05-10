@@ -15,6 +15,12 @@ public class Redtext extends Module {
         addSettings(chatModes);
     }
 
+    public void onEnable() {
+        if (ChatSuffix.INSTANCE.isEnabled()) {
+            ChatSuffix.INSTANCE.disable();
+        }
+    }
+
     @SubscribeEvent
     public void onChat(ClientChatEvent event) {
         if (chatModes.modes.get(chatModes.index).equals("Red")) {

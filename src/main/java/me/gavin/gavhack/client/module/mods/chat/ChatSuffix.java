@@ -13,19 +13,20 @@ public class ChatSuffix extends Module {
     public ModeSetting suffixMode = new ModeSetting("Suffix", this, "Regular", "Regular", "Ontoppe");
     public ChatSuffix() {
         super("ChatSuffix", Category.Chat);
+        addSettings(suffixMode);
     }
 
-
+    public void onEnable() {
+        if (Redtext.INSTANCE.isEnabled()) {
+            Redtext.INSTANCE.disable();
+        }
+    }
 
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public void onChat(ClientChatEvent event) {
         if (event.getMessage().startsWith("/") || event.getMessage().startsWith(String.valueOf(BeriiOnToppe.commandManager.prefix)))
             return;
 
-        event.setCanceled(true);
-
-        // done to make sure the suffix is not added onto your message
-        // history when you press the up arrow in the chat gui
         if (suffixMode.modes.get(suffixMode.index).equals("Regular")) {
             event.setMessage(event.getOriginalMessage().concat(" | BeriiClient"));
         }
