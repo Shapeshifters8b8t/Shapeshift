@@ -1,0 +1,16 @@
+[
+{
+  "modid": "beriiclient",
+  "name": "BeriiClient",
+  "description": "cool",
+  "version": "b1",
+  "mcversion": "1.12.2",
+  "url": "https://github.com/Gav06/Gavhack",
+  "updateUrl": "https://acaiberii.is-a.dev",
+  "authorList": ["Gav06,AcaiBerii"],
+  "credits": "Ollie,086,moomooooo,IUDevman,Gav06",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

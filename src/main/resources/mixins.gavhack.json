@@ -1,0 +1,31 @@
+{
+  "required": true,
+  "compatibilityLevel": "JAVA_8",
+  "package": "dev.is_a.acaiberii.client.mixes.mixins",
+  "refmap": "gavhack.refmap.json",
+  "mixins": [
+    "dev.is_a.acaiberii.client.mixes.mixins.MixinAbstractClientPlayer",
+    "dev.is_a.acaiberii.client.mixes.mixins.MixinBlock",
+    "dev.is_a.acaiberii.client.mixes.mixins.MixinBlockModelRenderer",
+    "dev.is_a.acaiberii.client.mixes.mixins.MixinBlockSoulSand",
+    "dev.is_a.acaiberii.client.mixes.mixins.MixinBlockWeb",
+    "dev.is_a.acaiberii.client.mixes.mixins.MixinEntity",
+    "dev.is_a.acaiberii.client.mixes.mixins.MixinEntityPlayerSP",
+    "dev.is_a.acaiberii.client.mixes.mixins.MixinEntityRenderer",
+    "dev.is_a.acaiberii.client.mixes.mixins.MixinGuiBossOverlay",
+    "dev.is_a.acaiberii.client.mixes.mixins.MixinGuiInGame",
+    "dev.is_a.acaiberii.client.mixes.mixins.MixinGuiMainMenu",
+    "dev.is_a.acaiberii.client.mixes.mixins.MixinGuiNewChat",
+    "dev.is_a.acaiberii.client.mixes.mixins.MixinGuiScreen",
+    "dev.is_a.acaiberii.client.mixes.mixins.MixinItemRenderer",
+    "dev.is_a.acaiberii.client.mixes.mixins.MixinMinecraft",
+    "dev.is_a.acaiberii.client.mixes.mixins.MixinNetworkManager",
+    "dev.is_a.acaiberii.client.mixes.mixins.MixinRenderGlobal",
+    "dev.is_a.acaiberii.client.mixes.mixins.MixinRenderManager",
+    "dev.is_a.acaiberii.client.mixes.mixins.MixinRenderPlayer",
+    "dev.is_a.acaiberii.client.mixes.mixins.MixinVisGraph",
+    "dev.is_a.acaiberii.client.mixes.mixins.MixinWorld",
+    "dev.is_a.acaiberii.client.mixes.mixins.accessor.AccessorCPacketCloseWindow",
+    "dev.is_a.acaiberii.client.mixes.mixins.accessor.AccessorCPacketPlayerTryToUseItemOnBlock"
+  ]
+}
