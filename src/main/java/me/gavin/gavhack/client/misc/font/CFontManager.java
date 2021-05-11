@@ -4,16 +4,16 @@ import java.awt.Font;
 
 public class CFontManager {
 
-    public static Font CUSTOM_FONT = getFontByName("muli-semibold").deriveFont(18f);
-    public static Font QUCKSAND = getFontByName("quicksand").deriveFont(18f);
+    public static Font REGULAR = getFontByName("regular").deriveFont(18f);
+    public static Font BOLD = getFontByName("bold").deriveFont(18f);
 
     public static Font getFontByName(String name) {
-        if (name.equalsIgnoreCase("muli-semibold")) {
-            return getFontFromInput("/assets/gavhack/Muli-SemiBold.ttf");
+        if (name.equalsIgnoreCase("regular")) {
+            return getFontFromInput("/assets/gavhack/Regular.ttf");
         }
 
-        if (name.equalsIgnoreCase("quicksand")) {
-            return getFontFromInput("/assets/gavhack/Quicksand.ttf");
+        if (name.equalsIgnoreCase("bold")) {
+            return getFontFromInput("/assets/gavhack/Bold.ttf");
         }
 
         return null;

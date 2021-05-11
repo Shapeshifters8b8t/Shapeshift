@@ -22,7 +22,7 @@ public class CFontRenderer extends CFont {
         setupMinecraftColorcodes();
         setupBoldItalicIDs();
     }
-    String fontName = "Arial";
+    String fontName = "Segoe UI";
     int fontSize = 18;
     public String getFontName() {
         return this.fontName;
