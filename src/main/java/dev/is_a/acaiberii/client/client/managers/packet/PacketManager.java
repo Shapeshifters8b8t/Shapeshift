@@ -6,7 +6,7 @@ import net.minecraft.network.Packet;
 import java.util.Objects;
 
 public class PacketManager {
-    public static void SendPacket(Packet pack) {
+    public static void sendPacket(Packet pack) {
         Objects.requireNonNull(Minecraft.getMinecraft().getConnection()).sendPacket(pack);
     }
 }
