@@ -10,25 +10,8 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.stream.Collectors;
-
-/**
- * Default implementation of {@code EventBus}
- *
- * @author Brady
- * @since 1/19/2017
- */
 public class EventManager implements EventBus {
-
-    /**
-     * Map containing all Listenable objects that have been previously subscribed and
-     * their associated Listener instances. This reduces the amount of reflection calls
-     * that would otherwise be required when subscribing a Listenable to the event bus.
-     */
     private final Map<Listenable, List<Listener>> SUBSCRIPTION_CACHE = new ConcurrentHashMap<>();
-
-    /**
-     * Map containing all event classes and their corresponding listeners
-     */
     private final Map<Class<?>, List<Listener>> SUBSCRIPTION_MAP = new ConcurrentHashMap<>();
 
     @Override
@@ -78,31 +61,9 @@ public class EventManager implements EventBus {
         if (listeners != null)
             listeners.forEach(listener -> listener.invoke(event));
     }
-
-    /**
-     * Checks if a Field is a valid Event Handler field
-     * by checking the field type and presence
-     * of the {@code EventHandler} annotation.
-     *
-     * @see EventHandler
-     *
-     * @param field Field being checked
-     * @return Whether or not the Field is valid
-     */
     private static boolean isValidField(Field field) {
         return field.isAnnotationPresent(EventHandler.class) && Listener.class.isAssignableFrom(field.getType());
     }
-
-    /**
-     * Creates a listener from the specified object and method.
-     * After the listener is created, it is passed to the listener
-     * subscription method.
-     *
-     * @see #subscribe(Listener)
-     *
-     * @param listenable Parent object
-     * @param field Listener field
-     */
     private static Listener asListener(Listenable listenable, Field field) {
         try {
             boolean accessible = field.isAccessible();
