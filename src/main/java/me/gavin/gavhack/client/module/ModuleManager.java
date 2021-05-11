@@ -32,6 +32,7 @@ public class ModuleManager {
         registerMod(new KillAura());
         registerMod(new Offhand());
         registerMod(new AutoEZ());
+        registerMod(new Burrow());
 
         // render
         registerMod(new BlockOutline());
