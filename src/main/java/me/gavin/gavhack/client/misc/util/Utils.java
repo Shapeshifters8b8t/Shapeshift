@@ -24,7 +24,7 @@ public class Utils {
     }
 
     public static void playClick() {
-        mc.getSoundHandler().playSound(PositionedSoundRecord.getRecord(SoundEvents.UI_BUTTON_CLICK, 1.0F, 0.25F));
+        mc.getSoundHandler().playSound(PositionedSoundRecord.getRecord(SoundEvents.BLOCK_LADDER_BREAK, 1.0F, 0.10F));
     }
 
     public static int getRGBWave(float seconds, float brightness, float saturation, long index) {
