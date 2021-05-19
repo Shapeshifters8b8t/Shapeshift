@@ -10,7 +10,7 @@ import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class AutoEZ extends Module {
-    public ModeSetting ezMode = new ModeSetting("Ez Mode", this, "Regular", "Regular", "Ontoppe", "Daclub");
+    public ModeSetting ezMode = new ModeSetting("Ez Mode", this, "Regular", "Regular", "Ontoppe", "Daclub", "Shapeshifters");
     private EntityPlayer focus = null;
 
     public AutoEZ() {
@@ -33,6 +33,9 @@ public class AutoEZ extends Module {
                         }
                         else if (ezMode.modes.get(ezMode.index).equals("Daclub")) {
                             ChatManager.sendChatMessage("Hey " + focus.getDisplayNameString() + ", did you know that Daclub is onbottome?");
+                        }
+                        else if (ezMode.modes.get(ezMode.index).equals("Shapeshifters")) {
+                            ChatManager.sendChatMessage("Hey " + focus.getDisplayNameString() + ", did you know that the Shapeshifters are ontoppe??");
                         }
                         return;
                     }
