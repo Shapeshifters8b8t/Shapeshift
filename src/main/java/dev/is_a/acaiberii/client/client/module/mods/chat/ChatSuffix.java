@@ -27,10 +27,10 @@ public class ChatSuffix extends Module {
             return;
 
         if (suffixMode.modes.get(suffixMode.index).equals("Regular")) {
-            event.setMessage(event.getOriginalMessage().concat(" | BeriiClient"));
+            event.setMessage(event.getOriginalMessage().concat(" | Shapeshift"));
         }
         else if (suffixMode.modes.get(suffixMode.index).equals("Ontoppe")) {
-            event.setMessage(event.getOriginalMessage().concat(" | BeriiClient is the on toppest"));
+            event.setMessage(event.getOriginalMessage().concat(" | Shapeshift is the on toppest"));
         }
 
         mc.ingameGUI.getChatGUI().addToSentMessages(event.getOriginalMessage());
