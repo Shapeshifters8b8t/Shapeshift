@@ -20,7 +20,7 @@ public class Utils {
     private static Minecraft mc = Minecraft.getMinecraft();
 
     public static void printMSG(String message) {
-        mc.player.sendMessage(new TextComponentString(ChatFormatting.DARK_PURPLE + "[BeriiClient] " + ChatFormatting.RESET + message));
+        mc.player.sendMessage(new TextComponentString(ChatFormatting.DARK_PURPLE + "[Shapeshift] " + ChatFormatting.RESET + message));
     }
 
     public static void playClick() {
