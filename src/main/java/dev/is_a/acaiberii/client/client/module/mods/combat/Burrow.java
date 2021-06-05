@@ -19,6 +19,8 @@ import net.minecraftforge.fml.common.gameevent.TickEvent;
 
 import static net.minecraft.network.play.client.CPacketEntityAction.Action.START_SNEAKING;
 
+/// skidded idc :D
+
 public class Burrow extends Module {
     private final BooleanSetting rotate = new BooleanSetting("Rotate", this, false);
     private final NumberSetting offset = new NumberSetting("Offset", this, 7, 0, 20, 1);

@@ -26,10 +26,10 @@ public class AutoEZ extends Module {
                 if (event.getEntityPlayer().getUniqueID() == Minecraft.getMinecraft().player.getUniqueID()) {
                     if (focus.getHealth() <= 0.0 || focus.isDead || !Minecraft.getMinecraft().world.playerEntities.contains(focus)) {
                         if (ezMode.modes.get(ezMode.index).equals("Regular")) {
-                            ChatManager.sendChatMessage("Hey " + focus.getDisplayNameString() + ", you just got EZ'd by BeriiClient!");
+                            ChatManager.sendChatMessage("Hey " + focus.getDisplayNameString() + ", you just got EZ'd by Shapeshift!");
                         }
                         else if (ezMode.modes.get(ezMode.index).equals("Ontoppe")) {
-                            ChatManager.sendChatMessage("Hey " + focus.getDisplayNameString() + ", did you know that BeriiClient is ontoppe?");
+                            ChatManager.sendChatMessage("Hey " + focus.getDisplayNameString() + ", did you know that Shapeshift is ontoppe?");
                         }
                         else if (ezMode.modes.get(ezMode.index).equals("Daclub")) {
                             ChatManager.sendChatMessage("Hey " + focus.getDisplayNameString() + ", did you know that Daclub is onbottome?");

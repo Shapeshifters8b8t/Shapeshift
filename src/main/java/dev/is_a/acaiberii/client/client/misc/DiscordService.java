@@ -3,6 +3,7 @@ package dev.is_a.acaiberii.client.client.misc;
 import club.minnced.discord.rpc.DiscordEventHandlers;
 import club.minnced.discord.rpc.DiscordRPC;
 import club.minnced.discord.rpc.DiscordRichPresence;
+import net.minecraft.client.Minecraft;
 
 public class DiscordService {
 
@@ -14,7 +15,7 @@ public class DiscordService {
         DiscordEventHandlers handlers = new DiscordEventHandlers();
         discordRPC.Discord_Initialize(discordID, handlers, true, null);
         richPresence.startTimestamp = System.currentTimeMillis() / 1000L;
-        richPresence.details = "beriiclient is best 8 bait cloosh";
+        richPresence.details = "Playing Shapeshift as " + Minecraft.getMinecraft().player.getName();
         richPresence.largeImageKey = "moon_1";
         //richPresence.smallImageKey = "moon_1";
         richPresence.state = null;

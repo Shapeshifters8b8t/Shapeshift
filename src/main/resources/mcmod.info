@@ -1,7 +1,7 @@
 [
 {
-  "modid": "beriiclient",
-  "name": "BeriiClient",
+  "modid": "shapeshift",
+  "name": "Shapeshift",
   "description": "cool",
   "version": "b1",
   "mcversion": "1.12.2",
