@@ -14,10 +14,10 @@ public class Flight extends Module {
     }
 
     public void onEnable() {
-        mc.player.capabilities.isFlying = true;
+        mc.player.capabilities.allowFlying = true;
     }
 
     public void onDisable() {
-        mc.player.capabilities.isFlying = false;
+        mc.player.capabilities.allowFlying = false;
     }
 }
