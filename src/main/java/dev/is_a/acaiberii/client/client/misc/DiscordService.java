@@ -5,17 +5,22 @@ import club.minnced.discord.rpc.DiscordRPC;
 import club.minnced.discord.rpc.DiscordRichPresence;
 import net.minecraft.client.Minecraft;
 
+import java.util.Objects;
+
 public class DiscordService {
 
     private static String discordID = "825553971358990336";
     private static DiscordRichPresence richPresence = new DiscordRichPresence();
     private static DiscordRPC discordRPC = DiscordRPC.INSTANCE;
 
-    public static void startRPC() {
+    public static void startRPC(boolean displayserver) {
         DiscordEventHandlers handlers = new DiscordEventHandlers();
         discordRPC.Discord_Initialize(discordID, handlers, true, null);
         richPresence.startTimestamp = System.currentTimeMillis() / 1000L;
-        richPresence.details = "Playing Shapeshift as " + Minecraft.getMinecraft().player.getName();
+        if (displayserver)
+            richPresence.details = "Playing Shapeshift as " + Minecraft.getMinecraft().player.getName() + " - " + Objects.requireNonNull(Minecraft.getMinecraft().player.getServer()).getServerHostname();
+        else
+            richPresence.details = "Playing Shapeshift as " + Minecraft.getMinecraft().player.getName();
         richPresence.largeImageKey = "moon_1";
         //richPresence.smallImageKey = "moon_1";
         richPresence.state = null;

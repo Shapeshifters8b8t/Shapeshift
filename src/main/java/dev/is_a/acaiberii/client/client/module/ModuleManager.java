@@ -26,6 +26,7 @@ public class ModuleManager {
 
     public ModuleManager() {
         init();
+        initDefaultModules();
     }
 
     ArrayList<Module> modules = new ArrayList<>();
@@ -78,6 +79,7 @@ public class ModuleManager {
         registerMod(new HudEditor());
         registerMod(new ClickGUIOld());
         registerMod(new PacketEXP());
+        registerMod(new Title());
 
         // chat
         registerMod(new Redtext());
@@ -88,6 +90,10 @@ public class ModuleManager {
 
         sortedMods.addAll(modules);
         sortedMods.sort(this::compareLength);
+    }
+
+    private void initDefaultModules() {
+        getMod("Title").enabled = true;
     }
 
     // alphabetical sort

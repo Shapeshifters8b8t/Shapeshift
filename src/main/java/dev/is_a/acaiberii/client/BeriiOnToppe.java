@@ -23,8 +23,8 @@ import org.apache.logging.log4j.Logger;
 // disabled will be gray or something
 @Mod(modid = BeriiOnToppe.MODID, name = BeriiOnToppe.NAME, version = BeriiOnToppe.VERSION)
 public class BeriiOnToppe {
-    public static final String MODID = "beriiclient";
-    public static final String NAME = "BeriiClient";
+    public static final String MODID = "shapeshift";
+    public static final String NAME = "Shapeshift";
     public static final String VERSION = "b1";
 
     public static Logger logger;

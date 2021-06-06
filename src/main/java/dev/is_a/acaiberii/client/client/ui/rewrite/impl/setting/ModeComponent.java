@@ -1,8 +1,10 @@
 package dev.is_a.acaiberii.client.client.ui.rewrite.impl.setting;
 
+import dev.is_a.acaiberii.client.client.events.ModeSettingChangedEvent;
 import dev.is_a.acaiberii.client.client.misc.util.FontUtil;
 import dev.is_a.acaiberii.client.client.setting.impl.ModeSetting;
 import dev.is_a.acaiberii.client.client.ui.rewrite.impl.BaseComponent;
+import net.minecraftforge.common.MinecraftForge;
 
 public class ModeComponent extends BaseComponent {
 
@@ -20,8 +22,11 @@ public class ModeComponent extends BaseComponent {
 
     @Override
     public void mouseClicked(int mouseX, int mouseY, int mouseButton) {
-        if (isMouseWithin(mouseX, mouseY) && mouseButton == 0)
+        if (isMouseWithin(mouseX, mouseY) && mouseButton == 0) {
             parent.cycle();
+            ModeSettingChangedEvent event = new ModeSettingChangedEvent(parent, parent.getMode());
+            MinecraftForge.EVENT_BUS.post(event);
+        }
     }
 
     @Override
