@@ -31,7 +31,7 @@ public class Spammer extends Module {
     private void onTick(LocalTickEvent event) {
         if (messages.isEmpty()) return;
         if (timer <= 0) {
-            ChatManager.sendChatMessage("BeriiClient ontoppe!");
+            ChatManager.sendChatMessage("Shapeshift ontoppe!");
             timer = (int) (delay.getValue() * 20);
         } else {
             timer--;

@@ -65,6 +65,7 @@ public class ModuleManager {
         registerMod(new Sprint());
         registerMod(new Step());
         registerMod(new Velocity());
+        registerMod(new Flight());
 
         // world
         registerMod(new BuildHeight());
