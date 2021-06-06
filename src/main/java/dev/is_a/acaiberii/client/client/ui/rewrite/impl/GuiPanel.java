@@ -4,9 +4,20 @@ import dev.is_a.acaiberii.client.BeriiOnToppe;
 import dev.is_a.acaiberii.client.client.module.Category;
 import dev.is_a.acaiberii.client.client.module.Module;
 import dev.is_a.acaiberii.client.client.ui.rewrite.api.component.AbstractDragComponent;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.audio.ISound;
+import net.minecraft.client.audio.Sound;
+import net.minecraft.client.audio.SoundList;
+import net.minecraft.client.audio.SoundRegistry;
 import net.minecraft.client.gui.Gui;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.SoundEvent;
 
 import java.util.ArrayList;
+import java.util.Objects;
+
+import static net.minecraft.util.SoundCategory.BLOCKS;
 
 public class GuiPanel extends AbstractDragComponent {
 
@@ -15,17 +26,17 @@ public class GuiPanel extends AbstractDragComponent {
     public boolean open;
 
     public GuiPanel(int x, int y, Category category) {
-        super(x, y, 100, 100);
+        super(x, y, 120, 100);
         modButtons = new ArrayList<>();
         int yOffset = 20;
         for (Module m : BeriiOnToppe.modManager.getModsByCategory(category)) {
-            modButtons.add(new ModuleButton(x, y + yOffset, width - 1, 15, m));
+            modButtons.add(new ModuleButton(x, y + yOffset, width, 15, m));
             yOffset += 16;
         }
         // button height will be 18, and the top of the panel will be 20 tall
         height = (modButtons.size() * 16) + 16;
 
-        button = new PanelButton(x, y, width, 16, category.toString()) {
+        button = new PanelButton(x + 10, y, width + 10, 16, category.toString()) {
             @Override
             public void handleClick(int mouseButton) {
                 if (mouseButton == 1)

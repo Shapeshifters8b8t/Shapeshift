@@ -23,8 +23,8 @@ public class ClickGuiScreen extends GuiScreen {
 
         int xOffset = 0;
         for (Category c : Category.values()) {
-            panels.add(new GuiPanel(20 + xOffset, 20, c));
-            xOffset += 110;
+            panels.add(new GuiPanel(10 + xOffset, 20, c));
+            xOffset += 140;
         }
 
         guiColor = new Color(94, 8, 63);
