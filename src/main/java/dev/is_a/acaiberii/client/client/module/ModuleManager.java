@@ -8,7 +8,6 @@ import dev.is_a.acaiberii.client.client.module.mods.combat.*;
 import dev.is_a.acaiberii.client.client.module.mods.misc.*;
 import dev.is_a.acaiberii.client.client.module.mods.movement.*;
 import dev.is_a.acaiberii.client.client.module.mods.render.*;
-import dev.is_a.acaiberii.client.client.module.mods.tests.PacketTests;
 import dev.is_a.acaiberii.client.client.module.mods.world.BuildHeight;
 import dev.is_a.acaiberii.client.client.module.mods.world.NoRotate;
 import dev.is_a.acaiberii.client.client.module.mods.world.Timer;
@@ -17,7 +16,6 @@ import dev.is_a.acaiberii.client.client.module.mods.combat.*;
 import dev.is_a.acaiberii.client.client.module.mods.misc.*;
 import dev.is_a.acaiberii.client.client.module.mods.movement.*;
 import dev.is_a.acaiberii.client.client.module.mods.render.*;
-import dev.is_a.acaiberii.client.client.module.mods.tests.ChatTests;
 import dev.is_a.acaiberii.client.client.module.mods.world.*;
 
 import java.util.ArrayList;
@@ -85,10 +83,6 @@ public class ModuleManager {
         registerMod(new Redtext());
         registerMod(new ChatSuffix());
         registerMod(new Shrug());
-
-        // tests
-        registerMod(new ChatTests());
-        registerMod(new PacketTests());
 
         modules.sort(this::compareTo);
 
