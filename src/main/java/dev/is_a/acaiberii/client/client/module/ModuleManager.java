@@ -5,6 +5,7 @@ import dev.is_a.acaiberii.client.client.module.mods.chat.ChatSuffix;
 import dev.is_a.acaiberii.client.client.module.mods.chat.Redtext;
 import dev.is_a.acaiberii.client.client.module.mods.chat.Shrug;
 import dev.is_a.acaiberii.client.client.module.mods.combat.*;
+import dev.is_a.acaiberii.client.client.module.mods.debug.EventDebugger;
 import dev.is_a.acaiberii.client.client.module.mods.misc.*;
 import dev.is_a.acaiberii.client.client.module.mods.movement.*;
 import dev.is_a.acaiberii.client.client.module.mods.render.*;
@@ -26,7 +27,6 @@ public class ModuleManager {
 
     public ModuleManager() {
         init();
-        initDefaultModules();
     }
 
     ArrayList<Module> modules = new ArrayList<>();
@@ -79,21 +79,19 @@ public class ModuleManager {
         registerMod(new HudEditor());
         registerMod(new ClickGUIOld());
         registerMod(new PacketEXP());
-        registerMod(new Title());
 
         // chat
         registerMod(new Redtext());
         registerMod(new ChatSuffix());
         registerMod(new Shrug());
 
+        // debug
+        registerMod(new EventDebugger());
+
         modules.sort(this::compareTo);
 
         sortedMods.addAll(modules);
         sortedMods.sort(this::compareLength);
-    }
-
-    private void initDefaultModules() {
-        getMod("Title").enabled = true;
     }
 
     // alphabetical sort

@@ -26,6 +26,8 @@ public class ModeComponent extends BaseComponent {
             parent.cycle();
             ModeSettingChangedEvent event = new ModeSettingChangedEvent(parent, parent.getMode());
             MinecraftForge.EVENT_BUS.post(event);
+            if (event.isCanceled())
+                parent.setMode(parent.modes.get(parent.index - 1));
         }
     }
 

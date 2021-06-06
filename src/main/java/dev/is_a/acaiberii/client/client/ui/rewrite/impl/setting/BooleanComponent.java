@@ -1,10 +1,12 @@
 package dev.is_a.acaiberii.client.client.ui.rewrite.impl.setting;
 
+import dev.is_a.acaiberii.client.client.events.BoolSettingChangedEvent;
 import dev.is_a.acaiberii.client.client.misc.util.FontUtil;
 import dev.is_a.acaiberii.client.client.setting.impl.BooleanSetting;
 import dev.is_a.acaiberii.client.client.ui.rewrite.impl.BaseComponent;
 import dev.is_a.acaiberii.client.client.ui.rewrite.impl.ClickGuiScreen;
 import net.minecraft.client.gui.Gui;
+import net.minecraftforge.common.MinecraftForge;
 
 public class BooleanComponent extends BaseComponent {
 
@@ -25,8 +27,11 @@ public class BooleanComponent extends BaseComponent {
 
     @Override
     public void mouseClicked(int mouseX, int mouseY, int mouseButton) {
-        if (isMouseWithin(mouseX, mouseY) && mouseButton == 0)
+        if (isMouseWithin(mouseX, mouseY) && mouseButton == 0) {
             parent.enabled = !parent.enabled;
+            BoolSettingChangedEvent event = new BoolSettingChangedEvent(parent, parent.enabled);
+            MinecraftForge.EVENT_BUS.post(event);
+        }
     }
 
     @Override

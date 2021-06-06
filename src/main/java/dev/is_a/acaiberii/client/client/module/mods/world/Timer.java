@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class Timer extends Module {
 
-    public NumberSetting timer = new NumberSetting("TickLength", this, 60, 5, 200, 5);
+    public NumberSetting timer = new NumberSetting("Length", this, 60, 5, 200, 5);
 
     public Timer() {
         super("Timer", Category.World);
