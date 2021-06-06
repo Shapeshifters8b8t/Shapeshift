@@ -1,8 +1,10 @@
 package dev.is_a.acaiberii.client.client.ui.rewrite.impl.setting;
 
+import dev.is_a.acaiberii.client.client.events.KeybindSettingChangedEvent;
 import dev.is_a.acaiberii.client.client.misc.util.FontUtil;
 import dev.is_a.acaiberii.client.client.setting.impl.KeyBindSetting;
 import dev.is_a.acaiberii.client.client.ui.rewrite.impl.BaseComponent;
+import net.minecraftforge.common.MinecraftForge;
 import org.lwjgl.input.Keyboard;
 
 public class KeybindComponent extends BaseComponent {
@@ -44,6 +46,8 @@ public class KeybindComponent extends BaseComponent {
             }
 
             parent.setKeyCode(keyCode);
+            KeybindSettingChangedEvent event = new KeybindSettingChangedEvent(parent, keyCode);
+            MinecraftForge.EVENT_BUS.post(event);
         }
     }
 }

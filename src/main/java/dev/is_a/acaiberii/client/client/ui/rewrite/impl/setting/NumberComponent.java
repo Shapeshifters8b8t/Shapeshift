@@ -1,10 +1,12 @@
 package dev.is_a.acaiberii.client.client.ui.rewrite.impl.setting;
 
+import dev.is_a.acaiberii.client.client.events.NumberSettingChangedEvent;
 import dev.is_a.acaiberii.client.client.misc.util.FontUtil;
 import dev.is_a.acaiberii.client.client.setting.impl.NumberSetting;
 import dev.is_a.acaiberii.client.client.ui.rewrite.impl.BaseComponent;
 import dev.is_a.acaiberii.client.client.ui.rewrite.impl.ClickGuiScreen;
 import net.minecraft.client.gui.Gui;
+import net.minecraftforge.common.MinecraftForge;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -14,6 +16,7 @@ public class NumberComponent extends BaseComponent {
     public NumberSetting parent;
     double sliderWidth;
     boolean draggingSlider;
+    double value;
 
     public NumberComponent(NumberSetting parent, int x, int y, int width, int height) {
         super(x, y, width, height);
@@ -40,6 +43,8 @@ public class NumberComponent extends BaseComponent {
     @Override
     public void mouseReleased(int mouseX, int mouseY, int mouseButton) {
         this.draggingSlider = false;
+        NumberSettingChangedEvent event = new NumberSettingChangedEvent(parent, value);
+        MinecraftForge.EVENT_BUS.post(event);
     }
 
     private void update(int mouseX, int mouseY) {
@@ -53,6 +58,7 @@ public class NumberComponent extends BaseComponent {
             } else {
                 double newValue = roundToPlace(diff / width * (max - min) + min, 2);
                 this.parent.setValue(newValue);
+                value = newValue;
             }
         }
     }

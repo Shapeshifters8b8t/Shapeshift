@@ -7,5 +7,4 @@ public enum Category {
     World,
     Chat,
     Misc,
-    Debug,
 }

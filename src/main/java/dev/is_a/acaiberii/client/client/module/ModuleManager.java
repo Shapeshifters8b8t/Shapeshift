@@ -5,7 +5,6 @@ import dev.is_a.acaiberii.client.client.module.mods.chat.ChatSuffix;
 import dev.is_a.acaiberii.client.client.module.mods.chat.Redtext;
 import dev.is_a.acaiberii.client.client.module.mods.chat.Shrug;
 import dev.is_a.acaiberii.client.client.module.mods.combat.*;
-import dev.is_a.acaiberii.client.client.module.mods.debug.EventDebugger;
 import dev.is_a.acaiberii.client.client.module.mods.misc.*;
 import dev.is_a.acaiberii.client.client.module.mods.movement.*;
 import dev.is_a.acaiberii.client.client.module.mods.render.*;
@@ -84,9 +83,6 @@ public class ModuleManager {
         registerMod(new Redtext());
         registerMod(new ChatSuffix());
         registerMod(new Shrug());
-
-        // debug
-        registerMod(new EventDebugger());
 
         modules.sort(this::compareTo);
 
