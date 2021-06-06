@@ -1,4 +1,4 @@
-package dev.is_a.acaiberii.client.client.module.mods.misc;
+package dev.is_a.acaiberii.client.client.module.mods.chat;
 
 import dev.is_a.acaiberii.client.client.events.LocalTickEvent;
 import dev.is_a.acaiberii.client.client.managers.chat.ChatManager;

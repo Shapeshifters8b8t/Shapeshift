@@ -83,6 +83,7 @@ public class ModuleManager {
         registerMod(new Redtext());
         registerMod(new ChatSuffix());
         registerMod(new Shrug());
+        registerMod(new Spammer());
 
         modules.sort(this::compareTo);
 
