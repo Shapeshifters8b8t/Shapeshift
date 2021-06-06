@@ -17,7 +17,7 @@ public class DiscordService {
         DiscordEventHandlers handlers = new DiscordEventHandlers();
         discordRPC.Discord_Initialize(discordID, handlers, true, null);
         richPresence.startTimestamp = System.currentTimeMillis() / 1000L;
-        richPresence.details = "Playing Shapeshift as " + Minecraft.getMinecraft().player.getName();
+        richPresence.details = "Playing Shapeshift";
         richPresence.largeImageKey = "moon_1";
         //richPresence.smallImageKey = "moon_1";
         richPresence.state = null;
