@@ -12,9 +12,7 @@ public class DiscordRPC extends Module {
         this.settings.add(displayServer);
     }
 
-    public void onEnable() {
-        DiscordService.startRPC(displayServer.enabled);
-    }
+    public void onEnable() { DiscordService.startRPC(); }
 
     public void onDisable() {
         DiscordService.stopRPC();

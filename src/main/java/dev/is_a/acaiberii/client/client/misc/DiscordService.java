@@ -13,14 +13,11 @@ public class DiscordService {
     private static DiscordRichPresence richPresence = new DiscordRichPresence();
     private static DiscordRPC discordRPC = DiscordRPC.INSTANCE;
 
-    public static void startRPC(boolean displayserver) {
+    public static void startRPC() {
         DiscordEventHandlers handlers = new DiscordEventHandlers();
         discordRPC.Discord_Initialize(discordID, handlers, true, null);
         richPresence.startTimestamp = System.currentTimeMillis() / 1000L;
-        if (displayserver)
-            richPresence.details = "Playing Shapeshift as " + Minecraft.getMinecraft().player.getName() + " - " + Objects.requireNonNull(Minecraft.getMinecraft().player.getServer()).getServerHostname();
-        else
-            richPresence.details = "Playing Shapeshift as " + Minecraft.getMinecraft().player.getName();
+        richPresence.details = "Playing Shapeshift as " + Minecraft.getMinecraft().player.getName();
         richPresence.largeImageKey = "moon_1";
         //richPresence.smallImageKey = "moon_1";
         richPresence.state = null;
