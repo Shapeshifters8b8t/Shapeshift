@@ -26,7 +26,7 @@ public class GuiPanel extends AbstractDragComponent {
     public boolean open;
 
     public GuiPanel(int x, int y, Category category) {
-        super(x, y, 120, 100);
+        super(x, y, 100, 100);
         modButtons = new ArrayList<>();
         int yOffset = 20;
         for (Module m : BeriiOnToppe.modManager.getModsByCategory(category)) {

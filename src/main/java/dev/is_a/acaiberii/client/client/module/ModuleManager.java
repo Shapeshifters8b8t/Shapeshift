@@ -68,6 +68,7 @@ public class ModuleManager {
         registerMod(new BuildHeight());
         registerMod(new NoRotate());
         registerMod(new Timer());
+        registerMod(new ViewDistance());
 
         // misc
         registerMod(new AntiCrash());
