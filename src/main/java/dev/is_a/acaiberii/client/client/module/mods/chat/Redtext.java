@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class Redtext extends Module {
     private BooleanSetting space = new BooleanSetting("Space", this, true);
-    private ModeSetting chatModes = new ModeSetting("Mode", this, "Red", "Red", "Green", "Cyan");
+    private ModeSetting chatModes = new ModeSetting("Mode", this, "Red", "Red", "Green", "Cyan", "Gold");
 
     public Redtext() {
         super("Redtext", Category.Chat);
@@ -27,14 +27,15 @@ public class Redtext extends Module {
         String spacebtw;
         if (space.enabled) spacebtw = " ";
         else spacebtw = "";
-        if (chatModes.modes.get(chatModes.index).equals("Red")) {
-            event.setMessage("@" + spacebtw + event.getMessage());
-        }
-        else if (chatModes.modes.get(chatModes.index).equals("Green")) {
-            event.setMessage(">" + spacebtw + event.getMessage());
-        }
-        else if (chatModes.modes.get(chatModes.index).equals("Cyan")) {
-            event.setMessage("^" + spacebtw + event.getMessage());
+        switch (chatModes.modes.get(chatModes.index)) {
+            case "Red":
+                event.setMessage("@" + spacebtw + event.getMessage());
+            case "Green":
+                event.setMessage(">" + spacebtw + event.getMessage());
+            case "Cyan":
+                event.setMessage("^" + spacebtw + event.getMessage());
+            case "Gold":
+                event.setMessage("$" + spacebtw + event.getMessage());
         }
     }
 }
