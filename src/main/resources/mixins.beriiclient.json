@@ -5,8 +5,6 @@
   "refmap": "gavhack.refmap.json",
   "mixins": [
     "dev.is_a.acaiberii.client.mixin.mixins.MixinAbstractClientPlayer",
-    "dev.is_a.acaiberii.client.mixin.mixins.MixinBlock",
-    "dev.is_a.acaiberii.client.mixin.mixins.MixinBlockModelRenderer",
     "dev.is_a.acaiberii.client.mixin.mixins.MixinBlockSoulSand",
     "dev.is_a.acaiberii.client.mixin.mixins.MixinBlockWeb",
     "dev.is_a.acaiberii.client.mixin.mixins.MixinEntity",
@@ -26,7 +24,7 @@
     "dev.is_a.acaiberii.client.mixin.mixins.MixinVisGraph",
     "dev.is_a.acaiberii.client.mixin.mixins.MixinWorld",
     "dev.is_a.acaiberii.client.mixin.mixins.accessor.AccessorCPacketCloseWindow",
-    "dev.is_a.acaiberii.client.mixin.mixins.accessor.AccessorCPacketPlayerTryToUseItemOnBlock"
+    "dev.is_a.acaiberii.client.mixin.mixins.accessor.AccessorCPacketPlayerTryToUseItemOnBlock",
     "dev.is_a.acaiberii.client.mixin.mixins.accessor.AccessorCPacketPlayerTryToUseItemOnBlock"
   ]
 }
