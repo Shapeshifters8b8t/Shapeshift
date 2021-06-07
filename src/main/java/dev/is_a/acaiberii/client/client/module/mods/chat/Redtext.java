@@ -1,5 +1,6 @@
 package dev.is_a.acaiberii.client.client.module.mods.chat;
 
+import dev.is_a.acaiberii.client.BeriiOnToppe;
 import dev.is_a.acaiberii.client.client.module.Category;
 import dev.is_a.acaiberii.client.client.module.Module;
 import dev.is_a.acaiberii.client.client.setting.impl.BooleanSetting;
@@ -17,13 +18,12 @@ public class Redtext extends Module {
     }
 
     public void onEnable() {
-        if (ChatSuffix.INSTANCE.isEnabled()) {
-            ChatSuffix.INSTANCE.disable();
-        }
+
     }
 
     @SubscribeEvent
     public void onChat(ClientChatEvent event) {
+        if (event.getMessage().startsWith("/") || event.getMessage().startsWith(String.valueOf(BeriiOnToppe.commandManager.prefix))) return;
         String spacebtw;
         if (space.enabled) spacebtw = " ";
         else spacebtw = "";

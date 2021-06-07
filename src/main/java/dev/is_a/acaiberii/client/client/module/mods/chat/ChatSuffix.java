@@ -16,9 +16,7 @@ public class ChatSuffix extends Module {
     }
 
     public void onEnable() {
-        if (Redtext.INSTANCE.isEnabled()) {
-            Redtext.INSTANCE.disable();
-        }
+
     }
 
     @SubscribeEvent(priority = EventPriority.LOWEST)
@@ -26,13 +24,12 @@ public class ChatSuffix extends Module {
         if (event.getMessage().startsWith("/") || event.getMessage().startsWith(String.valueOf(BeriiOnToppe.commandManager.prefix)))
             return;
 
-        switch (suffixMode.modes.get(suffixMode.index)) {
+        switch (suffixMode.getMode()) {
             case "Spaced":
                 event.setMessage(event.getMessage().concat(" | \uFF33\uFF48\uFF41\uFF50\uFF45\uFF53\uFF48\uFF49\uFF46\uFF54"));
             case "Monospace":
                 event.setMessage(event.getMessage().concat(" | \uD835\uDE82\uD835\uDE91\uD835\uDE8A\uD835\uDE99\uD835\uDE8E\uD835\uDE9C\uD835\uDE91\uD835\uDE92\uD835\uDE8F\uD835\uDE9D"));
         }
-
         mc.ingameGUI.getChatGUI().addToSentMessages(event.getOriginalMessage());
     }
 }
