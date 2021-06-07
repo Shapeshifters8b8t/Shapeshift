@@ -1,15 +1,14 @@
 package dev.is_a.acaiberii.client;
 
-import dev.is_a.acaiberii.client.cloosh.command.CommandManager;
-import dev.is_a.acaiberii.client.cloosh.misc.ConfigSystem;
-import dev.is_a.acaiberii.client.cloosh.misc.EventProcessor;
-import dev.is_a.acaiberii.client.cloosh.misc.font.CFontRenderer;
-import dev.is_a.acaiberii.client.cloosh.misc.util.CapeUtil;
-import dev.is_a.acaiberii.client.cloosh.module.ModuleManager;
-import dev.is_a.acaiberii.client.cloosh.ui.gui.GuiHackManager;
-import dev.is_a.acaiberii.client.cloosh.ui.hud.HUD;
-import dev.is_a.acaiberii.client.cloosh.ui.hud.HudEditorScreen;
-import dev.is_a.acaiberii.client.cloosh.ui.rewrite.impl.ClickGuiScreen;
+import dev.is_a.acaiberii.client.client.command.CommandManager;
+import dev.is_a.acaiberii.client.client.misc.ConfigSystem;
+import dev.is_a.acaiberii.client.client.misc.EventProcessor;
+import dev.is_a.acaiberii.client.client.misc.font.CFontRenderer;
+import dev.is_a.acaiberii.client.client.misc.util.CapeUtil;
+import dev.is_a.acaiberii.client.client.module.ModuleManager;
+import dev.is_a.acaiberii.client.client.ui.hud.HUD;
+import dev.is_a.acaiberii.client.client.ui.hud.HudEditorScreen;
+import dev.is_a.acaiberii.client.client.ui.rewrite.impl.ClickGuiScreen;
 
 import java.awt.*;
 
@@ -38,9 +37,6 @@ public class ClientBootstrapper {
         BeriiOnToppe.clickGui = new ClickGuiScreen();
         BeriiOnToppe.log("ClickGUI initialized");
 
-        BeriiOnToppe.gui = new GuiHackManager();
-        BeriiOnToppe.log("Old ClickGUI initialized");
-
         BeriiOnToppe.hudEditor = new HudEditorScreen();
         BeriiOnToppe.log("HudEditor initialized");
 
@@ -53,6 +49,6 @@ public class ClientBootstrapper {
         Runtime.getRuntime().addShutdownHook(BeriiOnToppe.configSystem);
         BeriiOnToppe.log("Config System initialized");
 
-        BeriiOnToppe.log("Completed Gavhack initialization");
+        BeriiOnToppe.log("Completed Shapeshift's initialization process");
     }
 }
