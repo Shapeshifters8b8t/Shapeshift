@@ -50,9 +50,6 @@ public class ModuleManager {
         registerMod(new NameTags());
         registerMod(new NoRender());
         registerMod(new NoWeather());
-        registerMod(new ViewModel());
-        registerMod(new Wallhack());
-        registerMod(new XRay());
 
         // movement
         registerMod(new AutoWalk());
@@ -83,7 +80,6 @@ public class ModuleManager {
         registerMod(new Redtext());
         registerMod(new ChatSuffix());
         registerMod(new Shrug());
-        registerMod(new Spammer());
 
         modules.sort(this::compareTo);
 
