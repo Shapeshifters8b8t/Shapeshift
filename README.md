@@ -1,3 +1,1 @@
-# Shapeshift
-Everything is skidded from Gavhack lole.
-Autodupe not working but will soon :)))
+im abandoning this piece of shit because modesettings are giving me torture
