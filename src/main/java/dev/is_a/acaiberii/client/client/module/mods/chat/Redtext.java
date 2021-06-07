@@ -14,7 +14,7 @@ public class Redtext extends Module {
 
     public Redtext() {
         super("Redtext", Category.Chat);
-        addSettings(chatModes);
+        addSettings(chatModes, space);
     }
 
     public void onEnable() {
