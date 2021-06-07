@@ -21,15 +21,15 @@ public class Criticals extends Module {
     public void onPacket(PacketEvent.Send event) {
         if (event.getPacket() instanceof CPacketUseEntity) {
             CPacketUseEntity packet = (CPacketUseEntity) event.getPacket();
-            switch (attackMode.getMode()) {
-                case "Packet":
-                    if (packet.getAction() == CPacketUseEntity.Action.ATTACK && mc.player.onGround) {
-                        mc.getConnection().sendPacket(new CPacketPlayer.Position(mc.player.posX, mc.player.posY + 0.1f, mc.player.posZ, false));
-                        mc.getConnection().sendPacket(new CPacketPlayer.Position(mc.player.posX, mc.player.posY, mc.player.posZ, false));
-                    }
-                case "Jump":
-                    if (mc.player.onGround)
-                        mc.player.jump();
+
+            if (attackMode.is("Packet")) {
+                if (packet.getAction() == CPacketUseEntity.Action.ATTACK && mc.player.onGround) {
+                    mc.getConnection().sendPacket(new CPacketPlayer.Position(mc.player.posX, mc.player.posY + 0.1f, mc.player.posZ, false));
+                    mc.getConnection().sendPacket(new CPacketPlayer.Position(mc.player.posX, mc.player.posY, mc.player.posZ, false));
+                }
+            } else {
+                if (mc.player.onGround)
+                    mc.player.jump();
             }
         }
     }
