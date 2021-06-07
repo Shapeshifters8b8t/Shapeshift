@@ -1,5 +1,6 @@
 package dev.is_a.acaiberii.client.client.ui.rewrite.impl;
 
+import dev.is_a.acaiberii.client.client.events.ModuleToggledEvent;
 import dev.is_a.acaiberii.client.client.misc.util.FontUtil;
 import dev.is_a.acaiberii.client.client.module.Module;
 import dev.is_a.acaiberii.client.client.setting.Setting;
@@ -12,6 +13,7 @@ import dev.is_a.acaiberii.client.client.ui.rewrite.impl.setting.KeybindComponent
 import dev.is_a.acaiberii.client.client.ui.rewrite.impl.setting.ModeComponent;
 import dev.is_a.acaiberii.client.client.ui.rewrite.impl.setting.NumberComponent;
 import net.minecraft.client.gui.Gui;
+import net.minecraftforge.common.MinecraftForge;
 
 import java.util.ArrayList;
 
@@ -67,6 +69,8 @@ public class ModuleButton extends AbstractButton {
     public void handleClick(int mouseButton) {
         if (mouseButton == 0) {
             module.toggle();
+            ModuleToggledEvent event = new ModuleToggledEvent(module);
+            MinecraftForge.EVENT_BUS.post(event);
         }
 
         if (mouseButton == 1) {

@@ -6,7 +6,6 @@ import dev.is_a.acaiberii.client.client.misc.EventProcessor;
 import dev.is_a.acaiberii.client.client.misc.font.CFontRenderer;
 import dev.is_a.acaiberii.client.client.misc.util.CapeUtil;
 import dev.is_a.acaiberii.client.client.module.ModuleManager;
-import dev.is_a.acaiberii.client.client.ui.gui.GuiHackManager;
 import dev.is_a.acaiberii.client.client.ui.hud.HUD;
 import dev.is_a.acaiberii.client.client.ui.hud.HudEditorScreen;
 import dev.is_a.acaiberii.client.client.ui.rewrite.impl.ClickGuiScreen;
@@ -37,9 +36,6 @@ public class ClientBootstrapper {
 
         BeriiOnToppe.clickGui = new ClickGuiScreen();
         BeriiOnToppe.log("ClickGUI initialized");
-
-        BeriiOnToppe.gui = new GuiHackManager();
-        BeriiOnToppe.log("Old ClickGUI initialized");
 
         BeriiOnToppe.hudEditor = new HudEditorScreen();
         BeriiOnToppe.log("HudEditor initialized");

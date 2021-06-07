@@ -6,7 +6,6 @@ import dev.is_a.acaiberii.client.client.misc.EventProcessor;
 import dev.is_a.acaiberii.client.client.misc.font.CFontRenderer;
 import dev.is_a.acaiberii.client.client.misc.util.CapeUtil;
 import dev.is_a.acaiberii.client.client.module.ModuleManager;
-import dev.is_a.acaiberii.client.client.ui.gui.GuiHackManager;
 import dev.is_a.acaiberii.client.client.ui.hud.HUD;
 import dev.is_a.acaiberii.client.client.ui.hud.HudEditorScreen;
 import dev.is_a.acaiberii.client.client.ui.rewrite.impl.ClickGuiScreen;
@@ -42,7 +41,6 @@ public class BeriiOnToppe {
     public static CFontRenderer cfont;
     public static ModuleManager modManager;
     public static CommandManager commandManager;
-    public static GuiHackManager gui;
     public static HudEditorScreen hudEditor;
     public static CapeUtil capeUtil;
     public static EventProcessor eventProcessor;
